@@ -2,18 +2,6 @@
 
 A modern, fully responsive 3D portfolio website built with **Three.js**, **GSAP**, and **Glassmorphism** design.
 
-## ✨ Features
-
-- 🎮 **Interactive 3D Hero** — Floating particles & geometric shapes with mouse parallax (Three.js)
-- ⌨️ **Typing Effect** — Animated role subtitle
-- 🌗 **Dark / Light Mode** toggle
-- 🎯 **Scroll Reveal** animations on all sections
-- 📊 **Animated Skill Bars** and stat counters
-- 🃏 **3D Card Tilt** on project hover (mousemove perspective)
-- 🖱️ **Custom Cursor** with smooth follower
-- 📱 **Fully Mobile Responsive**
-- 🧭 **Smooth scrolling** navbar with active section tracking
-
 ## 📂 Structure
 
 ```
