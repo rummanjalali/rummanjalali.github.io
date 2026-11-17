@@ -3,486 +3,1562 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of a Data Science Student, AI Developer and Problem Solver – showcasing projects, skills, and experience." />
-  <title>Rumman Jalali | Data Science & AI Portfolio</title>
+  <meta name="description" content="Portfolio of Rumman Jalali — Data Analyst, Machine Learning Developer, and Travel Explorer. Transforming data into stories, and stories into experiences." />
+  <meta name="keywords" content="Rumman Jalali, Data Analyst, Data Science, Machine Learning, Power BI, Python, Travel Photography, Portfolio" />
+  <meta name="author" content="Rumman Jalali" />
+  
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Rumman Jalali | Data Analyst &amp; Travel Explorer" />
+  <meta property="og:description" content="DATA MINDED. WORLD CURIOUS. Exploring patterns in data and stories across the globe." />
+  <meta property="og:image" content="profile.png" />
+  <meta property="og:type" content="website" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Rumman Jalali — Data Analyst &amp; Travel Explorer</title>
 
+  <!-- Typography: Satoshi (Headings), Inter (Body), Playfair Display (Travel Editorial), JetBrains Mono (Data/Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,600,700,800,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Custom Cursor -->
-  <div id="cursor" class="cursor"></div>
-  <div id="cursor-follower" class="cursor-follower"></div>
+  <!-- Atmospheric Background Grid & Glow -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+  <div class="bg-radial-gradient" aria-hidden="true"></div>
 
-  <!-- ───────────── NAVBAR ───────────── -->
-  <nav id="navbar" class="navbar">
-    <div class="nav-logo">
-      <span class="logo-text">Rumman Jalali</span>
-    </div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#hero" class="nav-link active">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
-        <i class="fas fa-sun" id="theme-icon"></i>
-      </button>
-      <button id="hamburger" class="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Rumman Jalali Homepage">
+        <span class="brand-title">
+          <span class="brand-dot" aria-hidden="true"></span>
+          RUMMAN JALALI
+        </span>
+        <span class="brand-subtitle">DATA MINDED · WORLD CURIOUS</span>
+      </a>
 
-  <!-- ───────────── HERO ───────────── -->
-  <section id="hero" class="section hero-section">
-    <canvas id="hero-canvas"></canvas>
+      <!-- Desktop Navigation Links (Royal Blue semantic role) -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#about" class="nav-link"><span>01</span>About</a>
+        <a href="#skills" class="nav-link"><span>02</span>Skills</a>
+        <a href="#projects" class="nav-link"><span>03</span>Projects</a>
+        <a href="#travel" class="nav-link"><span>04</span>Travel</a>
+        <a href="#synthesis" class="nav-link"><span>05</span>Synthesis</a>
+        <a href="#contact" class="nav-link"><span>06</span>Contact</a>
+      </nav>
 
-    <div class="hero-content">
-      <div class="hero-badge reveal-up">
-        <span class="badge-dot"></span>
-        Available for opportunities
-      </div>
-      <h1 class="hero-name reveal-up">
-        <span class="name-line">Hi, I'm</span>
-        <span class="name-gradient">Rumman Jalali</span>
-      </h1>
-      <p class="hero-subtitle reveal-up">
-        <span class="typing-static">I am a&nbsp;</span>
-        <span id="typing-text" class="typing-target"></span>
-        <span class="typing-cursor">|</span>
-      </p>
-      <div class="hero-btns reveal-up">
-        <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-rocket"></i> View Projects
+      <!-- Nav Actions: Theme Toggle + Connect CTA -->
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Switch between light and dark theme">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="nav-cta">
+          <span>Connect</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
         </a>
-        <a href="#contact" class="btn btn-ghost">
-          <i class="fas fa-paper-plane"></i> Contact Me
-        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
-      <div class="hero-stats reveal-up">
-        <div class="stat-item">
-          <span class="stat-num" data-target="4">0</span>
-          <span class="stat-label">Projects</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num" data-target="3">0</span>
-          <span class="stat-label">Certifications</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num" data-target="10">0</span>
-          <span class="stat-label">Skills</span>
-        </div>
-      </div>
+
     </div>
+  </header>
 
-    <div class="hero-scroll-hint">
-      <div class="scroll-mouse">
-        <div class="scroll-wheel"></div>
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <nav class="mobile-links" aria-label="Mobile Navigation">
+      <a href="#about" class="mobile-link"><span>01</span> About</a>
+      <a href="#skills" class="mobile-link"><span>02</span> Skills</a>
+      <a href="#projects" class="mobile-link"><span>03</span> Projects</a>
+      <a href="#travel" class="mobile-link"><span>04</span> Travel Journal</a>
+      <a href="#synthesis" class="mobile-link"><span>05</span> Synthesis</a>
+      <a href="#contact" class="mobile-link"><span>06</span> Contact</a>
+    </nav>
+    <div class="mobile-footer">
+      <div class="mono" style="font-size: 0.75rem; color: var(--text-muted);">
+        BASED IN UTTAR PRADESH, INDIA · 28°N
       </div>
-      <span>Scroll</span>
+      <a href="mailto:rummanmohd123@gmail.com" class="mono text-royal-blue" style="font-size: 0.8125rem;">
+        rummanmohd123@gmail.com
+      </a>
     </div>
-  </section>
+  </div>
 
-  <!-- ───────────── ABOUT ───────────── -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <span class="section-tag">Who I Am</span>
-        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-      </div>
-
-      <div class="about-grid">
-        <!-- Avatar card -->
-        <div class="about-card glass-card reveal-left">
-          <div class="about-avatar">
-            <div class="avatar-ring"></div>
-            <div class="avatar-inner">
-              <i class="fas fa-user-astronaut avatar-icon"></i>
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Content Left Column -->
+          <div class="hero-content">
+            
+            <!-- Availability Beacon -->
+            <div class="hero-status-pill reveal">
+              <span class="status-beacon" aria-hidden="true"></span>
+              <span>Available for opportunities</span>
+              <span style="color: var(--border); margin-inline: 0.35rem;">|</span>
+              <span style="color: var(--emerald);">Uttar Pradesh, India</span>
             </div>
-            <div class="avatar-glow"></div>
-          </div>
-          <div class="about-tags">
-            <span class="tag"><i class="fas fa-graduation-cap"></i> B.Tech Data Science</span>
-            <span class="tag"><i class="fas fa-brain"></i> AI Enthusiast</span>
-            <span class="tag"><i class="fas fa-map-marker-alt"></i> Uttar Pradesh, India</span>
-          </div>
-        </div>
 
-        <!-- Bio + skills -->
-        <div class="about-content reveal-right">
-          <p class="about-bio">
-            I'm a passionate <strong>Data Science student</strong> with a deep love for building
-            intelligent systems and transforming raw data into meaningful insights. I specialize in
-            Python, Machine Learning, and AI — creating solutions that bridge the gap between
-            technology and real-world impact.
+            <div class="hero-name-badge reveal reveal-delay-1">
+              DATA ANALYST &amp; TRAVEL EXPLORER · <strong>RUMMAN JALALI</strong>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="hero-headline reveal reveal-delay-2">
+              <span class="headline-line">I TURN DATA INTO</span>
+              <span class="headline-line"><span class="highlight-data">STORIES.</span> AND STORIES</span>
+              <span class="headline-line">INTO <span class="highlight-travel">EXPERIENCES.</span></span>
+            </h1>
+
+            <!-- Narrative Intro -->
+            <p class="hero-intro reveal reveal-delay-3">
+              Merging <strong>rigorous quantitative thinking</strong> with an unyielding instinct for <strong>global exploration</strong>. I examine complex patterns, train intelligent machine learning models, and engineer business intelligence dashboards — then venture beyond the terminal to document mountain summits, historic architecture, and remote routes.
+            </p>
+
+            <!-- Dual CTAs: Emerald Green for Work + Royal Blue for Travel -->
+            <div class="hero-cta-group reveal reveal-delay-4">
+              <a href="#projects" class="btn btn-emerald">
+                <span>Explore My Work</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#travel" class="btn btn-royal-blue">
+                <span>Explore My Journey</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Stats Bar (Emerald Green numbers) -->
+            <div class="hero-stats reveal reveal-delay-4">
+              <div class="stat-block">
+                <div class="stat-value">
+                  <span class="stat-number" data-target="4">0</span><span class="stat-accent">+</span>
+                </div>
+                <div class="stat-label">Core Systems Built</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-value">
+                  <span class="stat-number" data-target="10">0</span><span class="stat-accent">+</span>
+                </div>
+                <div class="stat-label">Technical Competencies</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-value">
+                  <span class="stat-number" data-target="10">0</span><span class="stat-accent">+</span>
+                </div>
+                <div class="stat-label">Expedition Dispatches</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Visual Column (Right) -->
+          <div class="hero-visual reveal reveal-delay-2">
+            <div class="editorial-frame">
+              <div class="frame-corner frame-corner-tl" aria-hidden="true"></div>
+              <div class="frame-corner frame-corner-tr" aria-hidden="true"></div>
+              <div class="frame-corner frame-corner-bl" aria-hidden="true"></div>
+              <div class="frame-corner frame-corner-br" aria-hidden="true"></div>
+
+              <div class="frame-image-wrapper">
+                <img src="profile.png" alt="Rumman Jalali — Data Analyst and Travel Explorer" class="profile-img" width="1080" height="1440" priority="high" />
+              </div>
+
+              <div class="frame-meta">
+                <div class="frame-meta-location">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>28.65°N, 77.23°E</span>
+                </div>
+                <div class="mono" style="font-size: 0.6875rem; color: var(--emerald);">
+                  ARCHIVE ID: RJ-2026
+                </div>
+              </div>
+
+              <!-- Floating Context Badge -->
+              <div class="frame-badge-float">
+                <span class="frame-badge-title">Profile Spec</span>
+                <span class="frame-badge-desc">Data Science &amp; AI · B.Tech TMU</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT SECTION
+         ========================================================================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-kicker">01 / Background &amp; Philosophy</span>
+          <h2 class="section-title">The Convergence of Logic and Wanderlust.</h2>
+          <p class="section-subtitle">
+            How computational discipline and global wanderlust shape an intuitive approach to discovering patterns.
           </p>
+        </div>
 
-          <div class="skill-bars">
-            <div class="skill-bar-item">
-              <div class="skill-label"><span>Python</span><span>90%</span></div>
-              <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+        <div class="about-grid">
+          
+          <!-- Narrative Left -->
+          <div class="about-narrative reveal">
+            <p class="editorial-lead">
+              I believe data is never merely an inert array of rows and columns. It represents the living pulse of human behavior, systemic dynamics, and environmental rhythms waiting to be decoded.
+            </p>
+
+            <p class="about-paragraph">
+              Currently pursuing my <strong>Bachelor of Technology (B.Tech) in Data Science / Engineering at Teerthanker Mahaveer University</strong>, my coursework and research delve into Machine Learning algorithms, statistical modeling, data engineering architectures, and scalable analytics pipelines. My quantitative foundation was forged under the <strong>ISC Board at Maharaja Agrasen Public School</strong>, specializing in mathematics and science.
+            </p>
+
+            <div class="quote-block">
+              "Every dataset possesses an innate architecture. Every landscape possesses a subtle cadence. My purpose is to master both."
+              <cite>— Personal Working Philosophy</cite>
             </div>
-            <div class="skill-bar-item">
-              <div class="skill-label"><span>Machine Learning</span><span>82%</span></div>
-              <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-label"><span>SQL</span><span>85%</span></div>
-              <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-label"><span>Power BI</span><span>78%</span></div>
-              <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
-            </div>
+
+            <p class="about-paragraph">
+              During my intensive internship tenure at <strong>CODTECH IT Solutions Private Limited</strong>, I delivered practical data pipelines covering raw data cleaning, exploratory data analysis (EDA), feature engineering, and predictive modeling using Python, Pandas, Scikit-learn, and Matplotlib.
+            </p>
+
+            <p class="about-paragraph">
+              Yet, true clarity arrives when I step away from the monitor. With my camera in hand, navigating the snowfields of northern mountain passes or standing before the centuries-old sandstone arches of Jama Masjid, travel teaches me to respect nuance, context, and scale — traits indispensable to an extraordinary analyst.
+            </p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ───────────── PROJECTS ───────────── -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <span class="section-tag">My Work</span>
-        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- CardioVision AI -->
-        <div class="project-card glass-card reveal-up" data-delay="0">
-          <div class="project-card-glow"></div>
-          <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
-          <div class="project-content">
-            <h3 class="project-title">CardioVision AI</h3>
-            <p class="project-desc">Disease Prediction App using ML models trained on cardiac datasets, providing real-time risk assessment with explainable AI.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Scikit-learn</span>
-              <span class="tech-tag">Streamlit</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="#" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="proj-link proj-demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
-          </div>
-          <div class="project-card-shine"></div>
-        </div>
-
-        <!-- AI Chatbot -->
-        <div class="project-card glass-card reveal-up" data-delay="100">
-          <div class="project-card-glow"></div>
-          <div class="project-icon"><i class="fas fa-robot"></i></div>
-          <div class="project-content">
-            <h3 class="project-title">AI Chatbot</h3>
-            <p class="project-desc">NLP-based conversational AI that understands context and provides intelligent responses across multiple domains.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">NLP</span>
-              <span class="tech-tag">TensorFlow</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="#" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="proj-link proj-demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
-          </div>
-          <div class="project-card-shine"></div>
-        </div>
-
-        <!-- Sales Dashboard -->
-        <div class="project-card glass-card reveal-up" data-delay="200">
-          <div class="project-card-glow"></div>
-          <div class="project-icon"><i class="fas fa-chart-line"></i></div>
-          <div class="project-content">
-            <h3 class="project-title">Sales Dashboard</h3>
-            <p class="project-desc">Interactive Power BI dashboard with advanced DAX measures and drill-through reports for business intelligence analytics.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Power BI</span>
-              <span class="tech-tag">DAX</span>
-              <span class="tech-tag">SQL</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="#" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="proj-link proj-demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
-          </div>
-          <div class="project-card-shine"></div>
-        </div>
-
-        <!-- Sketch Classifier -->
-        <div class="project-card glass-card reveal-up" data-delay="300">
-          <div class="project-card-glow"></div>
-          <div class="project-icon"><i class="fas fa-pencil-ruler"></i></div>
-          <div class="project-content">
-            <h3 class="project-title">Sketch Classifier AI</h3>
-            <p class="project-desc">CNN-powered sketch recognition system that classifies hand-drawn images in real-time with high accuracy.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">CNN</span>
-              <span class="tech-tag">OpenCV</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="#" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="proj-link proj-demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
-          </div>
-          <div class="project-card-shine"></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ───────────── EXPERIENCE ───────────── -->
-  <section id="experience" class="section experience-section">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <span class="section-tag">My Journey</span>
-        <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
-      </div>
-
-      <div class="timeline">
-
-        <div class="timeline-item reveal-left">
-          <div class="timeline-marker">
-            <div class="marker-dot"><i class="fas fa-graduation-cap"></i></div>
-            <div class="marker-line"></div>
-          </div>
-          <div class="timeline-content glass-card">
-            <div class="timeline-date">Pursuing</div>
-            <h3 class="timeline-title">B.Tech in Data Science / Engineering</h3>
-            <p class="timeline-sub">Teerthanker Mahaveer University</p>
-            <p class="timeline-desc">Pursuing Bachelor's Degree in Data Science, covering Machine Learning, AI, Statistics, Data Engineering, and Computer Fundamentals.</p>
-            <div class="timeline-tags">
-              <span class="tag">Data Science</span>
-              <span class="tag">Fresher</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-right">
-          <div class="timeline-marker">
-            <div class="marker-dot"><i class="fas fa-certificate"></i></div>
-            <div class="marker-line"></div>
-          </div>
-          <div class="timeline-content glass-card">
-            <div class="timeline-date">Aug 2025 – Sep 2025</div>
-            <h3 class="timeline-title">Data Science Intern (Online · 6 Weeks)</h3>
-            <p class="timeline-sub">CODTECH IT Solutions Private Limited</p>
-            <p class="timeline-desc">Worked on real-world data science tasks including data cleaning, EDA, feature engineering, and model training & evaluation. Gained hands-on experience with Python, Pandas, Scikit-learn, and Matplotlib.</p>
-            <div class="timeline-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">EDA</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-left">
-          <div class="timeline-marker">
-            <div class="marker-dot"><i class="fas fa-school"></i></div>
-            <div class="marker-line"></div>
-          </div>
-          <div class="timeline-content glass-card">
-            <div class="timeline-date">Class 12 – ISC</div>
-            <h3 class="timeline-title">Higher Secondary Education</h3>
-            <p class="timeline-sub">Maharaja Agrasen Public School</p>
-            <p class="timeline-desc">Completed Class 12 under the ISC board, building a strong foundation in science and mathematics that laid the groundwork for a career in Data Science.</p>
-            <div class="timeline-tags">
-              <span class="tag">ISC Board</span>
-              <span class="tag">Science Stream</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ───────────── SKILLS ───────────── -->
-  <section id="skills" class="section skills-section">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <span class="section-tag">Expertise</span>
-        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
-      </div>
-
-      <div class="skills-wrapper">
-
-        <div class="skills-category reveal-up" data-delay="0">
-          <h3 class="skills-cat-title"><i class="fas fa-code"></i> Programming</h3>
-          <div class="skills-grid">
-            <div class="skill-chip"><i class="fab fa-python"></i><span>Python</span></div>
-            <div class="skill-chip"><i class="fas fa-database"></i><span>SQL</span></div>
-          </div>
-        </div>
-
-        <div class="skills-category reveal-up" data-delay="100">
-          <h3 class="skills-cat-title"><i class="fas fa-tools"></i> Tools & Platforms</h3>
-          <div class="skills-grid">
-            <div class="skill-chip"><i class="fab fa-git-alt"></i><span>Git &amp; GitHub</span></div>
-            <div class="skill-chip"><i class="fas fa-book"></i><span>Jupyter Notebook</span></div>
-          </div>
-        </div>
-
-        <div class="skills-category reveal-up" data-delay="200">
-          <h3 class="skills-cat-title"><i class="fas fa-brain"></i> Data Science / ML</h3>
-          <div class="skills-grid">
-            <div class="skill-chip"><i class="fas fa-broom"></i><span>Data Cleaning</span></div>
-            <div class="skill-chip"><i class="fas fa-search"></i><span>EDA</span></div>
-            <div class="skill-chip"><i class="fas fa-cogs"></i><span>Feature Engineering</span></div>
-            <div class="skill-chip"><i class="fas fa-robot"></i><span>Scikit-learn</span></div>
-          </div>
-        </div>
-
-        <div class="skills-category reveal-up" data-delay="300">
-          <h3 class="skills-cat-title"><i class="fas fa-layer-group"></i> Libraries</h3>
-          <div class="skills-grid">
-            <div class="skill-chip"><i class="fas fa-calculator"></i><span>NumPy</span></div>
-            <div class="skill-chip"><i class="fas fa-table"></i><span>Pandas</span></div>
-            <div class="skill-chip"><i class="fas fa-chart-line"></i><span>Matplotlib</span></div>
-            <div class="skill-chip"><i class="fas fa-chart-area"></i><span>Seaborn</span></div>
-          </div>
-        </div>
-
-        <div class="skills-category reveal-up" data-delay="400">
-          <h3 class="skills-cat-title"><i class="fas fa-star"></i> Soft Skills</h3>
-          <div class="skills-grid">
-            <div class="skill-chip"><i class="fas fa-comments"></i><span>Communication</span></div>
-            <div class="skill-chip"><i class="fas fa-bolt"></i><span>Quick Learner</span></div>
-            <div class="skill-chip"><i class="fas fa-users"></i><span>Teamwork</span></div>
-            <div class="skill-chip"><i class="fas fa-clock"></i><span>Time Management</span></div>
-          </div>
-        </div>
-
-        <div class="skills-category reveal-up" data-delay="500">
-          <h3 class="skills-cat-title"><i class="fas fa-language"></i> Languages</h3>
-          <div class="skills-grid">
-            <div class="skill-chip"><i class="fas fa-globe"></i><span>English</span></div>
-            <div class="skill-chip"><i class="fas fa-globe"></i><span>Hindi</span></div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Floating 3D canvas for skills decoration -->
-      <div class="skills-3d-canvas">
-        <canvas id="skills-canvas"></canvas>
-      </div>
-    </div>
-  </section>
-
-  <!-- ───────────── CONTACT ───────────── -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <span class="section-tag">Get In Touch</span>
-        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
-      </div>
-
-      <div class="contact-grid">
-
-        <div class="contact-info reveal-left">
-          <h3>Let's build something amazing together</h3>
-          <p>Whether you have a project in mind, a collaboration idea, or just want to say hello — my inbox is always open.</p>
-          <div class="contact-items">
-            <a href="mailto:rummanmohd123@gmail.com" class="contact-item glass-card">
-              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <div class="ci-label">Email</div>
-                <div class="ci-value">rummanmohd123@gmail.com</div>
+          <!-- Dossier & Candid Right -->
+          <div class="about-dossier reveal reveal-delay-2">
+            
+            <div class="dossier-card">
+              <div class="dossier-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                <span>Academic &amp; Professional Milestones</span>
               </div>
-            </a>
-            <a href="https://linkedin.com/in/rumman-jalali" target="_blank" class="contact-item glass-card">
-              <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
-              <div>
-                <div class="ci-label">LinkedIn</div>
-                <div class="ci-value">linkedin.com/in/rumman-jalali</div>
+
+              <div class="dossier-items">
+                
+                <!-- B.Tech -->
+                <div class="dossier-item">
+                  <div class="dossier-period">Pursuing · Undergraduate</div>
+                  <h3 class="dossier-heading">B.Tech in Data Science &amp; Engineering</h3>
+                  <div class="dossier-sub">Teerthanker Mahaveer University</div>
+                  <p class="dossier-desc">
+                    Comprehensive study of Machine Learning, Artificial Intelligence, Statistical Foundations, Data Engineering, and Computational Principles.
+                  </p>
+                </div>
+
+                <!-- Internship -->
+                <div class="dossier-item">
+                  <div class="dossier-period">Aug 2025 – Sep 2025 · 6 Weeks</div>
+                  <h3 class="dossier-heading">Data Science Intern</h3>
+                  <div class="dossier-sub">CODTECH IT Solutions Private Limited</div>
+                  <p class="dossier-desc">
+                    Executed data transformation pipelines, exploratory data analysis, feature engineering, and predictive machine learning models using Python and Scikit-learn.
+                  </p>
+                </div>
+
+                <!-- Schooling -->
+                <div class="dossier-item">
+                  <div class="dossier-period">Higher Secondary · ISC Board</div>
+                  <h3 class="dossier-heading">Class 12 — Science &amp; Mathematics Stream</h3>
+                  <div class="dossier-sub">Maharaja Agrasen Public School</div>
+                  <p class="dossier-desc">
+                    Rigorous mathematical foundation and analytical reasoning establishing the springboard for advanced data science.
+                  </p>
+                </div>
+
               </div>
-            </a>
-            <a href="https://github.com" target="_blank" class="contact-item glass-card">
-              <div class="contact-icon"><i class="fab fa-github"></i></div>
-              <div>
-                <div class="ci-label">Location</div>
-                <div class="ci-value">Uttar Pradesh, India</div>
+            </div>
+
+            <!-- Featured Candid Photo from Expedition -->
+            <div class="dossier-snapshot">
+              <img src="gallary/3856471509943080000.jpg" alt="Field notes — Rest stop on mountain river boulders" loading="lazy" width="1440" height="1440" />
+              <div class="snapshot-caption">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+                <span>Field Dispatch: Riverbed boulder contemplation between data sprints.</span>
               </div>
-            </a>
+            </div>
+
           </div>
+
         </div>
 
-        <form class="contact-form glass-card reveal-right" id="contact-form">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <div class="input-wrapper">
-              <i class="fas fa-user input-icon"></i>
-              <input type="text" id="name" name="name" placeholder="John Doe" required />
-              <div class="input-glow"></div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <div class="input-wrapper">
-              <i class="fas fa-envelope input-icon"></i>
-              <input type="email" id="email" name="email" placeholder="john@example.com" required />
-              <div class="input-glow"></div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <div class="input-wrapper">
-              <i class="fas fa-tag input-icon"></i>
-              <input type="text" id="subject" name="subject" placeholder="Project Collaboration" />
-              <div class="input-glow"></div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <div class="input-wrapper">
-              <i class="fas fa-comment input-icon"></i>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-              <div class="input-glow"></div>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary full-width" id="send-btn">
-            <i class="fas fa-paper-plane"></i> Send Message
-            <span class="btn-ripple"></span>
-          </button>
-          <div id="form-status" class="form-status"></div>
-        </form>
+      </div>
+    </section>
 
+    <!-- ==========================================================================
+         SKILLS SECTION (EMERALD GREEN FOR DATA COMPETENCIES)
+         ========================================================================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-kicker">02 / Technical Competencies</span>
+          <h2 class="section-title">Tools, Technologies &amp; Methodologies.</h2>
+          <p class="section-subtitle">
+            Authentic competencies derived directly from applied coursework, internship implementations, and production code.
+          </p>
+        </div>
+
+        <div class="skills-categories-grid">
+          
+          <!-- Category 1: Programming & Querying -->
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-title-group">
+                <div class="category-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="category-name">Programming &amp; Querying</h3>
+              </div>
+              <span class="category-code">DEV.01</span>
+            </div>
+            <div class="skill-pills-list">
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                <span>Python</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                <span>SQL</span>
+              </div>
+            </div>
+            <p class="skill-meta-note">
+              Writing performant algorithmic logic, modular scripts, analytical SQL queries, multi-table joins, and data aggregations.
+            </p>
+          </div>
+
+          <!-- Category 2: Data Science & Machine Learning -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <div class="category-header">
+              <div class="category-title-group">
+                <div class="category-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+                </div>
+                <h3 class="category-name">Data Science &amp; ML</h3>
+              </div>
+              <span class="category-code">ML.02</span>
+            </div>
+            <div class="skill-pills-list">
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                <span>Data Cleaning</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>EDA (Exploratory Data Analysis)</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <span>Feature Engineering</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Scikit-learn</span>
+              </div>
+            </div>
+            <p class="skill-meta-note">
+              Transforming raw datasets into clean features, conducting univariate/multivariate distributions, and evaluating classifier metrics.
+            </p>
+          </div>
+
+          <!-- Category 3: Data Visualization & BI -->
+          <div class="skill-category-card reveal reveal-delay-2">
+            <div class="category-header">
+              <div class="category-title-group">
+                <div class="category-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+                <h3 class="category-name">Visualization &amp; BI</h3>
+              </div>
+              <span class="category-code">VIZ.03</span>
+            </div>
+            <div class="skill-pills-list">
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <span>Power BI</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>DAX</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                <span>Matplotlib</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M18 9l-5 5-4-4-6 6"></path></svg>
+                <span>Seaborn</span>
+              </div>
+            </div>
+            <p class="skill-meta-note">
+              Designing executive dashboards, complex DAX time-intelligence calculations, and publication-ready statistical visualizations.
+            </p>
+          </div>
+
+          <!-- Category 4: Scientific Libraries & Frameworks -->
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-title-group">
+                <div class="category-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                </div>
+                <h3 class="category-name">Libraries &amp; Deep Tech</h3>
+              </div>
+              <span class="category-code">LIB.04</span>
+            </div>
+            <div class="skill-pills-list">
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                <span>Pandas</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="M21 15l-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                <span>NumPy</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+                <span>OpenCV (CNN / Vision)</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                <span>TensorFlow &amp; NLP</span>
+              </div>
+            </div>
+            <p class="skill-meta-note">
+              Vectorized matrix manipulations, neural convolutional processing, tokenization, and multi-domain NLP workflows.
+            </p>
+          </div>
+
+          <!-- Category 5: Platforms & Environments -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <div class="category-header">
+              <div class="category-title-group">
+                <div class="category-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                  </svg>
+                </div>
+                <h3 class="category-name">Tools &amp; Platforms</h3>
+              </div>
+              <span class="category-code">ENV.05</span>
+            </div>
+            <div class="skill-pills-list">
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg>
+                <span>Git &amp; GitHub</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                <span>Jupyter Notebook</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span>Streamlit</span>
+              </div>
+            </div>
+            <p class="skill-meta-note">
+              Reproducible research notebooks, distributed version tracking, and interactive prototype deployments.
+            </p>
+          </div>
+
+          <!-- Category 6: Languages & Core Mindset -->
+          <div class="skill-category-card reveal reveal-delay-2">
+            <div class="category-header">
+              <div class="category-title-group">
+                <div class="category-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <h3 class="category-name">Core Strengths &amp; Languages</h3>
+              </div>
+              <span class="category-code">CAP.06</span>
+            </div>
+            <div class="skill-pills-list">
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span>Teamwork &amp; Communication</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Time Management</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                <span>English &amp; Hindi</span>
+              </div>
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>Quick Learner</span>
+              </div>
+            </div>
+            <p class="skill-meta-note">
+              Articulating technical narratives to stakeholders with clarity, speed, and collaborative rigor.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED PROJECTS SECTION
+         ========================================================================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-kicker">03 / Selected Analytical Systems</span>
+          <h2 class="section-title">Applied Data Science &amp; Machine Learning.</h2>
+          <p class="section-subtitle">
+            Engineered solutions solving tangible clinical, business intelligence, conversational, and computer vision challenges.
+          </p>
+        </div>
+
+        <div class="projects-list">
+          
+          <!-- Project 01: CardioVision AI -->
+          <article class="project-card reveal">
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-index">PROJECT // 01</span>
+                <span class="project-type-tag">Clinical Machine Learning</span>
+              </div>
+              <h3 class="project-title">CardioVision AI</h3>
+              <p class="project-desc">
+                An explainable machine learning decision-support system built to evaluate cardiac health datasets and compute early cardiovascular risk probability in real time.
+              </p>
+              
+              <div class="project-specs">
+                <div class="spec-item">
+                  <span class="spec-label">Problem Solved</span>
+                  <span class="spec-value">Delayed diagnosis &amp; opaque clinical stratification</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Key Outcome</span>
+                  <span class="spec-value">Real-time risk scoring with explainable feature importance</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">EDA</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View CardioVision AI GitHub Repository">
+                  <span>GitHub Repository</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <span style="color: var(--border);">|</span>
+                <a href="#contact" class="project-link" aria-label="Request CardioVision AI Live Walkthrough">
+                  <span>Inquire Architecture</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Custom SVG Mockup Preview -->
+            <div class="project-visual-preview" aria-hidden="true">
+              <div class="preview-topbar">
+                <span class="preview-indicator">
+                  <span class="preview-dot"></span>
+                  CARDIOVISION TELEMETRY ENGINE
+                </span>
+                <span>STATUS: INFERENCE ONLINE</span>
+              </div>
+              <svg class="svg-mockup" viewBox="0 0 460 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background grid -->
+                <line x1="20" y1="50" x2="440" y2="50" stroke="rgba(255,255,255,0.06)" />
+                <line x1="20" y1="110" x2="440" y2="110" stroke="rgba(255,255,255,0.06)" />
+                <line x1="20" y1="170" x2="440" y2="170" stroke="rgba(255,255,255,0.06)" />
+                <line x1="20" y1="230" x2="440" y2="230" stroke="rgba(255,255,255,0.06)" />
+                <!-- Cardiac Waveform line (Emerald Green) -->
+                <path d="M 30 110 L 100 110 L 115 80 L 125 150 L 135 40 L 145 170 L 155 100 L 170 110 L 250 110 L 265 80 L 275 150 L 285 40 L 295 170 L 305 100 L 320 110 L 430 110" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- Risk Probability Card -->
+                <rect x="260" y="140" width="170" height="90" rx="6" fill="#0B0F0E" stroke="rgba(16, 185, 129, 0.4)" />
+                <text x="275" y="165" font-family="'JetBrains Mono', monospace" font-size="11" fill="#9CA3AF">PREDICTED RISK</text>
+                <text x="275" y="198" font-family="'Satoshi', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF">11.8%</text>
+                <text x="360" y="196" font-family="'JetBrains Mono', monospace" font-size="11" fill="#10B981">LOW RISK</text>
+                <text x="275" y="218" font-family="'JetBrains Mono', monospace" font-size="9" fill="#6B7280">ROC-AUC: 0.892 · CONF: 96%</text>
+                <!-- Feature Importance Bars -->
+                <rect x="30" y="170" width="70" height="6" rx="3" fill="rgba(16, 185, 129, 0.9)" />
+                <rect x="30" y="190" width="120" height="6" rx="3" fill="rgba(16, 185, 129, 0.6)" />
+                <rect x="30" y="210" width="95" height="6" rx="3" fill="rgba(16, 185, 129, 0.3)" />
+                <text x="30" y="160" font-family="'JetBrains Mono', monospace" font-size="10" fill="#9CA3AF">MAX_HR / CHOL / RESTING_ECG</text>
+              </svg>
+            </div>
+          </article>
+
+          <!-- Project 02: AI Chatbot -->
+          <article class="project-card reveal">
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-index">PROJECT // 02</span>
+                <span class="project-type-tag">Natural Language Processing</span>
+              </div>
+              <h3 class="project-title">Contextual AI Chatbot</h3>
+              <p class="project-desc">
+                An intelligent conversational agent powered by neural NLP pipelines designed to comprehend multi-turn context and generate domain-adaptive responses with minimal latency.
+              </p>
+              
+              <div class="project-specs">
+                <div class="spec-item">
+                  <span class="spec-label">Problem Solved</span>
+                  <span class="spec-value">Context loss and rigid intent matching in support bots</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Key Outcome</span>
+                  <span class="spec-value">High conversational retention and seamless intent shifts</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">Tokenization</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View AI Chatbot GitHub Repository">
+                  <span>GitHub Repository</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <span style="color: var(--border);">|</span>
+                <a href="#contact" class="project-link" aria-label="Request AI Chatbot Demo">
+                  <span>Architecture Notes</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Custom SVG Mockup Preview -->
+            <div class="project-visual-preview" aria-hidden="true">
+              <div class="preview-topbar">
+                <span class="preview-indicator">
+                  <span class="preview-dot"></span>
+                  NLP EMBEDDING ATTENTION GRAPH
+                </span>
+                <span>LATENCY: 42MS</span>
+              </div>
+              <svg class="svg-mockup" viewBox="0 0 460 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- User utterance bubble -->
+                <rect x="30" y="35" width="260" height="45" rx="6" fill="#0B0F0E" stroke="rgba(255, 255, 255, 0.15)" />
+                <text x="45" y="62" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF">"Compare Q3 anomalies with historical trends."</text>
+                
+                <!-- Bot response bubble -->
+                <rect x="150" y="100" width="280" height="60" rx="6" fill="#131816" stroke="rgba(16, 185, 129, 0.35)" />
+                <text x="165" y="125" font-family="'Inter', sans-serif" font-size="12" fill="#10B981">Synthesized 3 divergence nodes:</text>
+                <text x="165" y="145" font-family="'Inter', sans-serif" font-size="11" fill="#9CA3AF">Variance +14.2% across northern zones.</text>
+
+                <!-- Vector attention flow line (Royal Blue) -->
+                <path d="M 60 80 Q 90 190 200 200 T 360 210" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="4 4" />
+                <circle cx="200" cy="200" r="5" fill="#2563EB" />
+                <text x="215" y="204" font-family="'JetBrains Mono', monospace" font-size="10" fill="#9CA3AF">INTENT: METRIC_DRILLDOWN (0.97)</text>
+              </svg>
+            </div>
+          </article>
+
+          <!-- Project 03: Sales Dashboard -->
+          <article class="project-card reveal">
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-index">PROJECT // 03</span>
+                <span class="project-type-tag">Business Intelligence &amp; Analytics</span>
+              </div>
+              <h3 class="project-title">Executive Sales Intelligence Dashboard</h3>
+              <p class="project-desc">
+                An enterprise-grade Power BI dashboard incorporating advanced DAX calculation models, dimensional data modeling, and drill-through matrices for commercial performance diagnostics.
+              </p>
+              
+              <div class="project-specs">
+                <div class="spec-item">
+                  <span class="spec-label">Problem Solved</span>
+                  <span class="spec-value">Fragmented sales records and sluggish executive visibility</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Key Outcome</span>
+                  <span class="spec-value">Instant margin attribution down to regional product tiers</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">DAX</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Data Modeling</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Sales Dashboard Project Repository">
+                  <span>GitHub Repository</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <span style="color: var(--border);">|</span>
+                <a href="#contact" class="project-link" aria-label="Request DAX Measures Walkthrough">
+                  <span>DAX Measure Specs</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Custom SVG Mockup Preview -->
+            <div class="project-visual-preview" aria-hidden="true">
+              <div class="preview-topbar">
+                <span class="preview-indicator">
+                  <span class="preview-dot"></span>
+                  POWER BI TELEMETRY &amp; KPI SUMMARY
+                </span>
+                <span>AGGREGATION: DYNAMIC DAX</span>
+              </div>
+              <svg class="svg-mockup" viewBox="0 0 460 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Bar Chart Elements (Emerald Green progression) -->
+                <rect x="40" y="140" width="30" height="70" rx="3" fill="rgba(255, 255, 255, 0.15)" />
+                <rect x="90" y="110" width="30" height="100" rx="3" fill="rgba(255, 255, 255, 0.25)" />
+                <rect x="140" y="80" width="30" height="130" rx="3" fill="rgba(16, 185, 129, 0.4)" />
+                <rect x="190" y="60" width="30" height="150" rx="3" fill="#10B981" />
+                <rect x="240" y="90" width="30" height="120" rx="3" fill="rgba(16, 185, 129, 0.6)" />
+                <!-- Trend line -->
+                <path d="M 55 130 Q 155 50 255 85 T 420 40" stroke="#FFFFFF" stroke-width="2" />
+                <circle cx="255" cy="85" r="4" fill="#10B981" />
+                <circle cx="420" cy="40" r="4" fill="#10B981" />
+                <!-- KPI Badge -->
+                <rect x="300" y="125" width="135" height="85" rx="6" fill="#0B0F0E" stroke="rgba(16, 185, 129, 0.3)" />
+                <text x="315" y="150" font-family="'JetBrains Mono', monospace" font-size="10" fill="#9CA3AF">GROSS REVENUE</text>
+                <text x="315" y="180" font-family="'Satoshi', sans-serif" font-weight="800" font-size="22" fill="#FFFFFF">$1.42M</text>
+                <text x="315" y="198" font-family="'JetBrains Mono', monospace" font-size="10" fill="#10B981">▲ +18.4% YOY</text>
+              </svg>
+            </div>
+          </article>
+
+          <!-- Project 04: Sketch Classifier AI -->
+          <article class="project-card reveal">
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-index">PROJECT // 04</span>
+                <span class="project-type-tag">Computer Vision / CNN</span>
+              </div>
+              <h3 class="project-title">Sketch Classifier AI</h3>
+              <p class="project-desc">
+                A convolutional neural network architecture trained to classify raw, unstructured hand-drawn digital sketches in real time with OpenCV noise filtering and stroke extraction.
+              </p>
+              
+              <div class="project-specs">
+                <div class="spec-item">
+                  <span class="spec-label">Problem Solved</span>
+                  <span class="spec-value">High stroke variance &amp; sparse drawing ambiguities</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Key Outcome</span>
+                  <span class="spec-value">Instant multi-class stroke recognition and low latency</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">CNN</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">Deep Learning</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Sketch Classifier GitHub Repository">
+                  <span>GitHub Repository</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <span style="color: var(--border);">|</span>
+                <a href="#contact" class="project-link" aria-label="Request Model Architecture Details">
+                  <span>CNN Layer Specs</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Custom SVG Mockup Preview -->
+            <div class="project-visual-preview" aria-hidden="true">
+              <div class="preview-topbar">
+                <span class="preview-indicator">
+                  <span class="preview-dot"></span>
+                  CONVOLUTIONAL FEATURE ACTIVATION
+                </span>
+                <span>KERNEL: 3X3 · STRIDE: 1</span>
+              </div>
+              <svg class="svg-mockup" viewBox="0 0 460 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Mountain sketch -->
+                <path d="M 50 180 L 120 90 L 160 140 L 210 70 L 290 180 Z" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M 120 90 L 140 120 L 175 105" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3 3" />
+                <!-- Bounding Box -->
+                <rect x="40" y="60" width="260" height="130" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1" stroke-dasharray="4 4" />
+                <text x="45" y="52" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10B981">BBOX: [40, 60, 300, 190]</text>
+                <!-- Prediction probabilities -->
+                <rect x="315" y="70" width="125" height="110" rx="6" fill="#0B0F0E" stroke="rgba(255, 255, 255, 0.12)" />
+                <text x="325" y="92" font-family="'JetBrains Mono', monospace" font-size="10" fill="#10B981">MOUNTAIN: 96.4%</text>
+                <text x="325" y="116" font-family="'JetBrains Mono', monospace" font-size="10" fill="#9CA3AF">PYRAMID: 2.1%</text>
+                <text x="325" y="140" font-family="'JetBrains Mono', monospace" font-size="10" fill="#9CA3AF">TENT: 0.8%</text>
+                <text x="325" y="164" font-family="'JetBrains Mono', monospace" font-size="9" fill="#6B7280">INFERENCE: 18ms</text>
+              </svg>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TRAVEL JOURNAL (PLAYFAIR DISPLAY & ROYAL BLUE INTERACTIONS)
+         ========================================================================== -->
+    <section class="section travel-section" id="travel">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-kicker" style="color: var(--royal-blue);"><span style="background-color: var(--royal-blue);" class="kicker-line"></span>04 / Travel Dispatches &amp; Field Journal</span>
+          <h2 class="section-title travel-editorial-title">The Curious Lens: Ridges, Monuments &amp; Stillness.</h2>
+          <p class="section-subtitle">
+            Authentic dispatches from expeditions across high-altitude Himalayan ranges, historic Mughal monuments, and mountain valleys. All imagery captured in the field.
+          </p>
+        </div>
+
+        <!-- Filter Bar (Royal Blue Active State) -->
+        <div class="travel-filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All Dispatches (10)</button>
+          <button class="filter-btn" data-filter="summits">Mountain Summits</button>
+          <button class="filter-btn" data-filter="heritage">Historic Heritage</button>
+          <button class="filter-btn" data-filter="snow">Winter Snowfall</button>
+          <button class="filter-btn" data-filter="field">Expedition Walks</button>
+        </div>
+
+        <!-- Asymmetric Editorial Gallery Grid -->
+        <div class="travel-gallery-grid" id="travel-grid">
+
+          <!-- 1. Mountain Ridge Silhouette (Wide Landscape) -->
+          <div class="gallery-item col-span-2 reveal" 
+               data-category="summits"
+               data-title="Solitary Mountain Ridge Perspective"
+               data-location="Himalayan Foothills, Northern India"
+               data-full-src="gallary/3798861296570625000.jpg"
+               data-is-video="false">
+            <div class="gallery-thumb-container">
+              <img src="gallary/3798861296570625000.jpg" alt="Rumman Jalali standing on a mountain ridge overlooking hills" class="gallery-img" loading="lazy" width="1440" height="810" />
+              <div class="gallery-overlay">
+                <div class="gallery-top-badges">
+                  <span class="gallery-tag">SUMMIT PERSPECTIVE</span>
+                  <div class="gallery-view-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <polyline points="9 21 3 21 3 15"></polyline>
+                      <line x1="21" y1="3" x2="14" y2="10"></line>
+                      <line x1="3" y1="21" x2="10" y2="14"></line>
+                    </svg>
+                  </div>
+                </div>
+                <div class="gallery-caption-meta">
+                  <h4 class="gallery-title">Solitary Mountain Ridge Perspective</h4>
+                  <div class="gallery-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Himalayan Foothills, Northern India</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Falling Snow Arms Open (Square) -->
+          <div class="gallery-item reveal reveal-delay-1" 
+               data-category="snow"
+               data-title="Suspended in Falling Winter Snow"
+               data-location="Highland Apple Orchards"
+               data-full-src="gallary/3863043176672696300.jpg"
+               data-is-video="false">
+            <div class="gallery-thumb-container">
+              <img src="gallary/3863043176672696300.jpg" alt="Rumman Jalali embracing falling snowflakes in the hills" class="gallery-img" loading="lazy" width="1440" height="1440" />
+              <div class="gallery-overlay">
+                <div class="gallery-top-badges">
+                  <span class="gallery-tag">WINTER SERENITY</span>
+                  <div class="gallery-view-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </div>
+                </div>
+                <div class="gallery-caption-meta">
+                  <h4 class="gallery-title">Suspended in Falling Snow</h4>
+                  <div class="gallery-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Highland Apple Orchards</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Jama Masjid Courtyard (Tall Portrait) -->
+          <div class="gallery-item row-span-2 reveal" 
+               data-category="heritage"
+               data-title="The Monumental Scale of Jama Masjid"
+               data-location="Old Delhi, India"
+               data-full-src="gallary/3843324469121788000.jpg"
+               data-is-video="false">
+            <div class="gallery-thumb-container">
+              <img src="gallary/3843324469121788000.jpg" alt="Courtyard view of Jama Masjid with sandstone domes and minarets" class="gallery-img" loading="lazy" width="1440" height="1920" />
+              <div class="gallery-overlay">
+                <div class="gallery-top-badges">
+                  <span class="gallery-tag">MUGHAL ARCHITECTURE</span>
+                  <div class="gallery-view-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </div>
+                </div>
+                <div class="gallery-caption-meta">
+                  <h4 class="gallery-title">Monumental Symmetry &amp; Minarets</h4>
+                  <div class="gallery-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Old Delhi, India</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Gate Steps Portrait (Tall Portrait) -->
+          <div class="gallery-item row-span-2 reveal reveal-delay-1" 
+               data-category="heritage"
+               data-title="Sandstone Steps of the Historic Gate"
+               data-location="Eastern Portal, Jama Masjid"
+               data-full-src="gallary/3843324469448942000.jpg"
+               data-is-video="false">
+            <div class="gallery-thumb-container">
+              <img src="gallary/3843324469448942000.jpg" alt="Rumman on the grand stone steps of Jama Masjid" class="gallery-img" loading="lazy" width="1440" height="1920" />
+              <div class="gallery-overlay">
+                <div class="gallery-top-badges">
+                  <span class="gallery-tag">HERITAGE PORTAL</span>
+                  <div class="gallery-view-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </div>
+                </div>
+                <div class="gallery-caption-meta">
+                  <h4 class="gallery-title">Echoes of the Red Sandstone</h4>
+                  <div class="gallery-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Eastern Portal, Jama Masjid</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Snow Trek Video Dispatch -->
+          <div class="gallery-item reveal reveal-delay-2" 
+               data-category="snow field"
+               data-title="Trekking Through Falling Snow [Live Motion Dispatch]"
+               data-location="Snowbound Alpine Traverse"
+               data-full-src="gallary/3863044310879586300.mp4"
+               data-is-video="true">
+            <div class="gallery-thumb-container">
+              <img src="gallary/3863044310879586300_thumb.jpg" alt="Trekking through fresh snow in apple orchards" class="gallery-img" loading="lazy" width="720" height="720" />
+              <div class="gallery-overlay">
+                <div class="gallery-top-badges">
+                  <span class="gallery-tag">
+                    MOTION DISPATCH
+                    <span class="video-badge">
+                      <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                      LIVE
+                    </span>
+                  </span>
+                  <div class="gallery-view-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="gallery-caption-meta">
+                  <h4 class="gallery-title">Trekking the Alpine Snow Trail</h4>
+                  <div class="gallery-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Snowbound Alpine Traverse</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. River Boulder Contemplation -->
+          <div class="gallery-item reveal" 
+               data-category="field"
+               data-title="Riverbed Granite Boulder Rest Stop"
+               data-location="Mountain River Basin"
+               data-full-src="gallary/3856471509943080000.jpg"
+               data-is-video="false">
+            <div class="gallery-thumb-container">
+              <img src="gallary/3856471509943080000.jpg" alt="Rest stop on mountain river boulders" class="gallery-img" loading="lazy" width="1440" height="1440" />
+              <div class="gallery-overlay">
+                <div class="gallery-top-badges">
+                  <span class="gallery-tag">VALLEY DISPATCH</span>
+                  <div class="gallery-view-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </div>
+                </div>
+                <div class="gallery-caption-meta">
+                  <h4 class="gallery-title">Where the Paved Roads End</h4>
+                  <div class="gallery-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Mountain River Basin</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Frosted Apple Orchards -->
+          <div class="gallery-item reveal reveal-delay-1" 
+               data-category="snow"
+               data-title="Winter Solitude Among Frosted Branches"
+               data-location="High Alpine Orchard"
+               data-full-src="gallary/3863043189616297000.jpg"
+               data-is-video="false">
+            <div class="gallery-thumb-container">
+              <img src="gallary/3863043189616297000.jpg" alt="Quiet contemplation in snowy apple orchard" class="gallery-img" loading="lazy" width="1440" height="1440" />
+              <div class="gallery-overlay">
+                <div class="gallery-top-badges">
+                  <span class="gallery-tag">WINTER SOLITUDE</span>
+                  <div class="gallery-view-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </div>
+                </div>
+                <div class="gallery-caption-meta">
+                  <h4 class="gallery-title">Quiet Among the Branches</h4>
+                  <div class="gallery-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>High Alpine Orchard</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Ridge Horizon Pointing (Widescreen Landscape) -->
+          <div class="gallery-item col-span-2 reveal reveal-delay-2" 
+               data-category="summits"
+               data-title="Charting Coordinates Across the Horizon"
+               data-location="Shivalik Ridge Lookout"
+               data-full-src="gallary/3798861296587393500.jpg"
+               data-is-video="false">
+            <div class="gallery-thumb-container">
+              <img src="gallary/3798861296587393500.jpg" alt="Looking outward and pointing towards distant mountain peaks" class="gallery-img" loading="lazy" width="1440" height="810" />
+              <div class="gallery-overlay">
+                <div class="gallery-top-badges">
+                  <span class="gallery-tag">SHARED EXPEDITIONS</span>
+                  <div class="gallery-view-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </div>
+                </div>
+                <div class="gallery-caption-meta">
+                  <h4 class="gallery-title">Pointing Toward Remote Horizons</h4>
+                  <div class="gallery-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Shivalik Ridge Lookout</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Winding Mountain Lane Walk -->
+          <div class="gallery-item reveal" 
+               data-category="field"
+               data-title="Winding Hillside Walkways &amp; Cottages"
+               data-location="Northern Hill Station"
+               data-full-src="gallary/3856471522601509400.jpg"
+               data-is-video="false">
+            <div class="gallery-thumb-container">
+              <img src="gallary/3856471522601509400.jpg" alt="Walking along quiet hillside cottage street" class="gallery-img" loading="lazy" width="1440" height="1440" />
+              <div class="gallery-overlay">
+                <div class="gallery-top-badges">
+                  <span class="gallery-tag">FIELD PATTERNS</span>
+                  <div class="gallery-view-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </div>
+                </div>
+                <div class="gallery-caption-meta">
+                  <h4 class="gallery-title">Winding Cottage Lanes</h4>
+                  <div class="gallery-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Northern Hill Station</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Endless Pine Panorama Video Dispatch -->
+          <div class="gallery-item col-span-2 reveal reveal-delay-1" 
+               data-category="summits"
+               data-title="Endless Pine Ridge Panorama [Live Motion Dispatch]"
+               data-location="Himalayan Pine Canopy"
+               data-full-src="gallary/3798861139770759000.mp4"
+               data-is-video="true">
+            <div class="gallery-thumb-container">
+              <img src="gallary/3798861139770759000_thumb.jpg" alt="Sweeping panorama of dense green pine ridge" class="gallery-img" loading="lazy" width="1080" height="608" />
+              <div class="gallery-overlay">
+                <div class="gallery-top-badges">
+                  <span class="gallery-tag">
+                    MOTION PANORAMA
+                    <span class="video-badge">
+                      <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                      LIVE
+                    </span>
+                  </span>
+                  <div class="gallery-view-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="gallery-caption-meta">
+                  <h4 class="gallery-title">Endless Pine Canopy Panorama</h4>
+                  <div class="gallery-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Himalayan Pine Canopy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LIGHTBOX MODAL
+         ========================================================================== -->
+    <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Media Lightbox Viewer">
+      <div class="lightbox-header">
+        <span class="lightbox-counter" id="lightbox-counter">
+          <strong>01</strong> / 10
+        </span>
+        <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close lightbox">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="lightbox-body">
+        <button class="lightbox-nav-btn lightbox-prev-btn" id="lightbox-prev" aria-label="Previous dispatch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="lightbox-media-wrapper" id="lightbox-media">
+          <!-- Dynamic Image or Video Injected via JavaScript -->
+        </div>
+
+        <button class="lightbox-nav-btn lightbox-next-btn" id="lightbox-next" aria-label="Next dispatch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <div class="lightbox-footer">
+        <h3 class="lightbox-caption-text" id="lightbox-caption">Dispatch Title</h3>
+        <div class="lightbox-location-text" id="lightbox-location">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Location</span>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- ───────────── FOOTER ───────────── -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">&lt;Rumman/&gt;</div>
-      <p class="footer-copy">© 2025 Rumman Jalali. Crafted with <span class="heart">♥</span> and lots of code.</p>
-      <div class="footer-social">
-        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/rumman-jalali" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:rummanmohd123@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    <!-- ==========================================================================
+         DATA MEETS EXPLORATION (CONCEPT SYNTHESIS SECTION)
+         ========================================================================== -->
+    <section class="section concept-section" id="synthesis">
+      <div class="container">
+        
+        <div class="concept-grid">
+          
+          <!-- Concept Narrative Left -->
+          <div class="concept-text reveal">
+            <span class="section-kicker">05 / The Intellectual Synthesis</span>
+            <h2 class="concept-quote">
+              "Every dataset tells a <span class="highlight-data">story.</span> Every journey creates <span class="highlight-travel">one.</span>"
+            </h2>
+            <p class="about-paragraph">
+              Data science without real-world context remains an abstract theoretical exercise. Travel without keen observational curiosity is simply transit. When you unite analytical rigor with geographic exploration, you discover that the world is an interconnected matrix of signals, topographical changes, and human narratives.
+            </p>
+
+            <div class="concept-pillars">
+              <div class="concept-pillar-card">
+                <div class="pillar-icon pillar-icon-travel" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                </div>
+                <h3 class="pillar-title">Spatial Curiosity</h3>
+                <p class="pillar-desc">
+                  Exploring varying terrains conditions the mind to embrace variance, navigate ambiguities, and understand the environments that generate raw data.
+                </p>
+              </div>
+
+              <div class="concept-pillar-card">
+                <div class="pillar-icon pillar-icon-data" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <h3 class="pillar-title">Quantitative Rigor</h3>
+                <p class="pillar-desc">
+                  Dissecting complex telemetry, training statistical models, and translating multivariate noise into clean, intuitive storytelling.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Topographic & Telemetry Stage Right -->
+          <div class="concept-interactive-stage reveal reveal-delay-2">
+            <div class="stage-topbar">
+              <span>SYNTHESIS VISUALIZER // DUAL AXIS</span>
+              <span id="telemetry-coords">LAT 31°10'N · ELEV 2,240M · HIMALAYAN RIDGELINE</span>
+            </div>
+
+            <!-- Topographic Elevation & Telemetry SVG -->
+            <div class="stage-canvas-wrapper" aria-hidden="true">
+              <svg class="telemetry-svg" viewBox="0 0 540 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Grid background -->
+                <line x1="40" y1="20" x2="40" y2="320" stroke="rgba(255,255,255,0.04)" />
+                <line x1="140" y1="20" x2="140" y2="320" stroke="rgba(255,255,255,0.04)" />
+                <line x1="240" y1="20" x2="240" y2="320" stroke="rgba(255,255,255,0.04)" />
+                <line x1="340" y1="20" x2="340" y2="320" stroke="rgba(255,255,255,0.04)" />
+                <line x1="440" y1="20" x2="440" y2="320" stroke="rgba(255,255,255,0.04)" />
+
+                <!-- Contour Elevation Lines (Topography - Emerald Green) -->
+                <path class="contour-line" d="M 20 280 Q 140 180 270 240 T 520 200" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.8" fill="none" />
+                <path class="contour-line" d="M 20 230 Q 160 120 290 180 T 520 140" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.6" fill="none" />
+                <path class="contour-line" d="M 20 180 Q 180 70 310 130 T 520 90" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.4" fill="none" />
+                <path class="contour-line" d="M 20 130 Q 200 40 330 80 T 520 50" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.25" fill="none" />
+
+                <!-- Data telemetry nodes & vectors -->
+                <g class="data-node">
+                  <circle cx="270" cy="240" r="4" fill="#10B981" />
+                  <circle cx="270" cy="240" r="9" stroke="#10B981" stroke-width="1" stroke-dasharray="2 2" />
+                  <text x="282" y="244" font-family="'JetBrains Mono', monospace" font-size="9" fill="#9CA3AF">WAYPOINT ALPHA</text>
+                </g>
+
+                <g class="data-node">
+                  <circle cx="160" cy="120" r="4" fill="#2563EB" />
+                  <circle cx="160" cy="120" r="8" stroke="#2563EB" stroke-width="1" stroke-dasharray="2 2" />
+                  <text x="172" y="124" font-family="'JetBrains Mono', monospace" font-size="9" fill="#9CA3AF">RIDGE SUMMIT · 2,410M</text>
+                </g>
+
+                <g class="data-node">
+                  <circle cx="330" cy="80" r="4" fill="#10B981" />
+                  <circle cx="330" cy="80" r="10" stroke="#10B981" stroke-width="1" stroke-dasharray="2 2" />
+                  <text x="342" y="84" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10B981">OPTIMAL REGRESSION TRAJECTORY</text>
+                </g>
+
+                <!-- Vector trajectory connector (Royal Blue) -->
+                <path d="M 270 240 L 160 120 L 330 80" stroke="#2563EB" stroke-width="1.4" stroke-dasharray="4 4" stroke-opacity="0.75" />
+              </svg>
+            </div>
+
+            <!-- Stage Interactive Controls -->
+            <div class="stage-controls">
+              <div style="display: flex; gap: 0.5rem;">
+                <button class="stage-layer-toggle active" data-layer="topo">
+                  <span>Topography</span>
+                </button>
+                <button class="stage-layer-toggle" data-layer="data">
+                  <span>Telemetry</span>
+                </button>
+                <button class="stage-layer-toggle" data-layer="synthesis">
+                  <span>Synthesis</span>
+                </button>
+              </div>
+              <span class="stage-coords-telemetry">CLICK TO TOGGLE MODEL LAYERS</span>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-kicker">06 / Initiate Conversation</span>
+          <h2 class="section-title">LET'S CREATE SOMETHING MEANINGFUL.</h2>
+          <p class="section-subtitle">
+            Whether you are seeking a data analyst with relentless curiosity, a collaborative machine learning engineer, or wish to talk travel and spatial storytelling — my channels are always open.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Channels Left Column -->
+          <div class="contact-info-col reveal">
+            <div class="contact-channels-list">
+              
+              <!-- Email Card -->
+              <a href="mailto:rummanmohd123@gmail.com" class="contact-channel-card" aria-label="Send Email to Rumman Jalali">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Direct Email</span>
+                  <span class="channel-value">rummanmohd123@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn Card -->
+              <a href="https://linkedin.com/in/rumman-jalali" target="_blank" rel="noopener noreferrer" class="contact-channel-card" aria-label="Connect on LinkedIn">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">LinkedIn Profile</span>
+                  <span class="channel-value">linkedin.com/in/rumman-jalali</span>
+                </div>
+              </a>
+
+              <!-- Location Card -->
+              <div class="contact-channel-card">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Current Base</span>
+                  <span class="channel-value">Uttar Pradesh, India · UTC +05:30</span>
+                </div>
+              </div>
+
+              <!-- GitHub Card -->
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-channel-card" aria-label="Visit GitHub Profile">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Code Repositories</span>
+                  <span class="channel-value">github.com</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form Right Column -->
+          <div class="contact-form-card reveal reveal-delay-2">
+            <form id="portfolio-contact-form" novalidate>
+              
+              <div class="form-group">
+                <label for="sender-name" class="form-label">Your Name</label>
+                <input type="text" id="sender-name" class="form-input" placeholder="e.g. Alex Morgan" required />
+              </div>
+
+              <div class="form-group">
+                <label for="sender-email" class="form-label">Email Address</label>
+                <input type="email" id="sender-email" class="form-input" placeholder="alex@domain.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="inquiry-type" class="form-label">Inquiry Focus</label>
+                <select id="inquiry-type" class="form-select">
+                  <option value="Analytics & ML Project">Data Analytics or ML Opportunity</option>
+                  <option value="Full-Time / Internship Role">Full-Time / Internship Role</option>
+                  <option value="Travel & Photography Collaboration">Travel &amp; Photography Collaboration</option>
+                  <option value="General Conversation">General Conversation</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-message" class="form-label">Message</label>
+                <textarea id="sender-message" class="form-textarea" placeholder="Tell me about your project, team, or opportunity..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-emerald" style="width: 100%;">
+                <span>Send Dispatch Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div class="form-status-message" id="form-status" role="alert"></div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-title">RUMMAN JALALI</div>
+          <div class="footer-subtitle">DATA MINDED. WORLD CURIOUS.</div>
+        </div>
+
+        <div class="footer-social-links" aria-label="Social Profiles">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/rumman-jalali" target="_blank" rel="noopener noreferrer" class="social-link-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="mailto:rummanmohd123@gmail.com" class="social-link-icon" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> Rumman Jalali. All rights reserved.
+        </div>
+        <div>
+          Luxury Minimalist + Modern Editorial Portfolio.
+        </div>
+        <a href="#hero" class="back-to-top-btn" id="back-to-top" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="js/cursor.js"></script>
-  <script src="js/three-scene.js"></script>
+  <!-- Core JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
